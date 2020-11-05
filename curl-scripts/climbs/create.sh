@@ -10,8 +10,9 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
     "climb": {
-      "text": "'"${TEXT}"'",
-      "title": "'"${TITLE}"'"
+      "name": "'"${NAME}"'",
+      "rating": "'"${RATING}"'"
+      "grade": "'"${GRADE}"'"
     }
   }'
 

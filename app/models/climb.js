@@ -12,15 +12,15 @@ const climbSchema = new mongoose.Schema({
   },
   rating: {
     type: Number,
-    required: true
+    required: true,
+    min: 1,
+    max: 5
   },
   grade: {
     type: Number,
-    required: true
-  },
-  reveiw: {
-    type: String,
-    required: true
+    required: true,
+    min: 5.4,
+    max: 5.17
   }
 }, {
   timestamps: true
