@@ -28,7 +28,7 @@ router.get('/climbs', (req, res, next) => {
 })
 
 // Show
-router.get('climbs/:id', requireToken, (req, res, next) => {
+router.get('/climbs/:id', requireToken, (req, res, next) => {
   Climb.findById(req.params.id)
     .then(handle404)
     .then(climb => res.status(200).json({ climb: climb.toObject() }))
