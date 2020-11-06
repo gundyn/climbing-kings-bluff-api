@@ -17,10 +17,8 @@ const climbSchema = new mongoose.Schema({
     max: 5
   },
   grade: {
-    type: Number,
-    required: true,
-    min: 5.4,
-    max: 5.17
+    type: String,
+    required: true
   }
 }, {
   timestamps: true

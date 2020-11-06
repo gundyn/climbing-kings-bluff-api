@@ -11,7 +11,7 @@ curl "${API}${URL_PATH}" \
   --data '{
     "climb": {
       "name": "'"${NAME}"'",
-      "rating": "'"${RATING}"'"
+      "rating": "'"${RATING}"'",
       "grade": "'"${GRADE}"'"
     }
   }'

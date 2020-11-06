@@ -37,11 +37,12 @@ router.get('climbs/:id', requireToken, (req, res, next) => {
 
 // Create
 router.post('/climbs', requireToken, (req, res, next) => {
-  const climb = req.body.climb
-  climb.owner = req.user.id
+  req.body.climb.owner = req.user.id
 
-  Climb.create(climb)
-    .then(climb => { res.status(201).json({ climb: climb.toObject() }) })
+  Climb.create(req.body.climb)
+    .then(climb => {
+      res.status(201).json({ climb: climb.toObject() })
+    })
     .catch(next)
 })
 
