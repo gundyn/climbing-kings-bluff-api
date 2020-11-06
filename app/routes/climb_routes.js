@@ -37,6 +37,7 @@ router.get('climbs/:id', requireToken, (req, res, next) => {
 
 // Create
 router.post('/climbs', requireToken, (req, res, next) => {
+  console.log('req.body ', req.body)
   req.body.climb.owner = req.user.id
 
   Climb.create(req.body.climb)
