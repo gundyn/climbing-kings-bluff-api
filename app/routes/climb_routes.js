@@ -27,6 +27,16 @@ router.get('/climbs', (req, res, next) => {
     .catch(next)
 })
 
+// route to get the logged in users climbs
+// router.get('/my-climbs/:user', (req, res, next) => {
+//   Climb.find()
+//     .then(climbs => {
+//       return climbs.map(climb => climb.toObject())
+//     })
+//     .then(climbs => res.status(200).json({ climbs: climbs }))
+//     .catch(next)
+// })
+
 // Show
 router.get('/climbs/:id', requireToken, (req, res, next) => {
   Climb.findById(req.params.id)
