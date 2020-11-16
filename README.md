@@ -26,5 +26,6 @@ Mongoose
 A route for just one users climbs
 
 **Images**
+
 *Entity Relationship Diagram (ERD):*
 ![Imgur Image](https://imgur.com/jBRx3Po.jpg)
